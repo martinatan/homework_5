@@ -1,0 +1,15 @@
+/* Global Styling for Muddy Paws Website */
+
+* {
+  box-sizing: border-box;
+}
+
+@font-family {
+  font-family: "eacologica round slab";
+  src: url("assets/fonts/eacologica-round-slab-ffp.ttf") format("truetype"),
+    url("assets/fonts/eacologica-round-slab-ffp.otf") format("opentype");
+}
+
+body {
+  font-family: "Cabin", sans-serif;
+}
