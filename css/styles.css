@@ -32,7 +32,7 @@ HEADER STYLING
 
 .header-nav {
   display: inline-block;
-  width: 70%;
+  width: 60%;
 }
 .header-nav ul {
   padding: 0px;
@@ -93,8 +93,9 @@ HEADER STYLING
 BODY STYLING
 */
 
-p {
+main p {
   color: #ffffff;
+  text-align: left;
 }
 
 a {
@@ -130,6 +131,10 @@ h3 {
   text-align: center;
 }
 
+h4 {
+  text-align: left;
+}
+
 button {
   font-family: "Cabin", sans-serif;
   font-size: 1em;
@@ -148,14 +153,16 @@ button:hover {
 }
 
 /* Featured Products Styling */
-.product-thumbnail {
-}
 
 .product-thumbnail img {
   width: 100%;
   height: auto;
-  padding: 10px;
+  padding: 20px;
   border-radius: 15px;
+}
+
+.product-text {
+  padding: 0px 20px;
 }
 
 /* 4-Column (25-25-25-25) Style */
@@ -214,12 +221,19 @@ footer {
   text-align: center;
 }
 
+#footer-contact {
+  text-align: center;
+}
+
 #footer-right {
   float: left;
   width: 25%;
 
   font-size: 0.9em;
-  text-align: right;
+}
+
+#footer-right p {
+  text-align: right !important;
 }
 
 footer ul {
