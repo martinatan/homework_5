@@ -1,1 +1,10 @@
 /* Styling for Home Page of Muddy Paws */
+
+/* Home Banner */
+
+/* Sections styling */
+
+#featured-products,
+#recent-articles {
+  text-align: center;
+}
