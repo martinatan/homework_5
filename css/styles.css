@@ -33,6 +33,10 @@ section {
   padding-bottom: 50px;
 }
 
+#intro {
+  padding-bottom: 0px;
+}
+
 /*
 HEADER STYLING
 */
