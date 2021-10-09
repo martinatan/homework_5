@@ -29,6 +29,7 @@ body {
 }
 
 section {
+  margin: 20px 0px;
   padding-bottom: 50px;
 }
 
@@ -36,9 +37,13 @@ section {
 HEADER STYLING
 */
 
+header {
+  padding-bottom: 15px;
+}
+
 .header-nav {
   display: inline-block;
-  width: 60%;
+  width: 75%;
 }
 .header-nav ul {
   padding: 0px;
@@ -48,9 +53,10 @@ HEADER STYLING
   list-style-type: none;
   font-family: "Coustard", serif;
   display: inline;
-  margin-right: 45px;
+  margin-right: 25px;
   font-size: 1.05em;
 }
+
 .header-nav a {
   color: #ffffff !important;
   text-decoration: none !important;
@@ -72,7 +78,7 @@ HEADER STYLING
 .header-extras {
   display: inline-block;
   float: right;
-  width: 30%;
+  width: 25%;
   position: relative;
 }
 
@@ -120,6 +126,7 @@ h2 {
 h1 {
   /* Orange text in Coustard font */
   font-size: 2.25em;
+  color: #ed9026;
 }
 
 h2 {
@@ -152,6 +159,12 @@ h5 {
   font-style: italic;
   font-size: 1em;
   margin: 0px;
+}
+
+h6 {
+  font-size: 0.8em;
+  text-align: center;
+  margin: 0.3em;
 }
 
 button {
