@@ -2,9 +2,89 @@
 
 /* Home Banner */
 
-/* Sections styling */
+.home-banner {
+  margin-top: 30px;
+}
 
+.banner-container {
+  height: 350px;
+  width: 100%;
+  background-image: url("../assets/images/dominik-kempf-NuQnmaax29c-unsplash.jpg");
+
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  position: relative;
+  filter: drop-shadow(0 6px 4px rgba(0, 0, 0, 0.25));
+
+}
+
+.banner-overlay {
+  width: 50%;
+  height; 100%;
+  float: right;
+
+  position: absolute;
+  top: 25px;
+  right: 0px;
+
+  padding: 50px 40px;
+
+  background-color: #ed9026;
+  border-radius: 25px 10px 25px 10px;
+
+  filter: drop-shadow(0 6px 4px rgba(0, 0, 0, 0.25));
+}
+
+.banner-overlay h2 {
+  color: #000;
+}
+
+.banner-overlay p {
+  color: #000;
+}
+
+#banner-button {
+  background-color: #516d00;
+}
+
+#banner-button:hover {
+  background-color: #a45e0c;
+}
+
+/* Sections styling */
 #featured-products,
 #recent-articles {
   text-align: center;
+}
+
+.featured-row {
+  margin-bottom: 30px;
+}
+
+/* Featured Products Styling */
+
+.product-thumbnail img {
+  width: 100%;
+  height: auto;
+  padding: 0px 20px;
+}
+
+.product-text {
+  padding: 0px 20px;
+}
+
+/* Recent Articles Styling */
+.article-section {
+  margin: 20px;
+}
+
+.article-thumbnail img {
+  width: 100%;
+  height: auto;
+  padding: 0px 20px;
+}
+
+.article-text {
+  padding: 0px 20px;
 }

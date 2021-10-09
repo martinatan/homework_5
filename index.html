@@ -60,17 +60,25 @@
 
         <!--HOME BANNER-->
         <section class="home-banner">
-
+            <div class="banner-container"> <!--contains background image?-->
+                <div class="banner-overlay"> <!--orange overlay-->
+                    <h2>Tackle any trek!</h2>
+                    <p>At Muddy Paws, we offer robust gear for dogs and cats to help pet lovers make the 
+                        most of any outdoor adventure. We opened this store as a way to serve and connect 
+                        a community of nature and animal lovers.
+                    </p>
+                    <a href="./about-us.html"><button id="banner-button">Read Our Story >></button></a>
+            </div>
         </section> <!-- home-banner -->
 
         <!-- FEATURED PRODUCTS SECTION -->
         <section id="featured-products">
-            <h2>Featured Products</h2>
+            <h2>Featured Gear</h2>
             <h3>
                 All products are available for pickup in-store or delivery, inventory permitting.
             </h3>
 
-            <div class="row">
+            <div class="row featured-row">
                 <div class="col-50 featured-product">
                     <div class="row">
                         <div class="col-50 product-thumbnail">
@@ -93,7 +101,9 @@
                 <div class="col-50 featured-product">
                     <div class="row">
                         <div class="col-50 product-thumbnail">
-                            <img src="./assets/images/dog-harness.jpg" alt="Cat with GPS Tracker Collar"/>
+                            <a href="./dog-harness.html">
+                                <img src="./assets/images/dog-harness.jpg" alt="Cat with GPS Tracker Collar"/>
+                            </a>
                         </div>
                         <div class="col-50 product-text">
                             <h4><a href="./dog-harness.html">Dog Harness</a></h4>
@@ -107,7 +117,7 @@
                     </div>
                 </div>
             </div> <!-- 50-50-row -->
-            <a href="./shop.html"><button class="shop-button">Shop All</button></a>
+            <a href="./shop.html"><button class="shop-button">Shop All Gear</button></a>
         </section> <!-- featured-products -->
 
         <!-- RECENT ARTICLES SECTION -->
@@ -117,7 +127,51 @@
                 Our residential pet experts write about how to use Muddy Paws gear and prep your pet for an outdoor adventure!
             </h3>
 
-            <a href="./articles.html"><button class="articles-button">View All</button></a>
+            <div class="row article-section">
+                <div class="col-37 article-thumbnail">
+                    <a href="./articles.html">
+                        <img 
+                        src="./assets/images/cat-article.jpg"
+                        alt="Cat and Kermit plushie sitting in a suitcase in the forest"
+                        />
+                    </a>
+                </div>
+                <div class="col-63 article-text">
+                    <h4><a href="./articles.html">My Favorite Gear for Camping with My Cat</a></h4>
+                    <h5>by Martina Tan, Muddy Paws Pet Expert</h5>
+                    <p>
+                        Donec elit elit, varius eu imperdiet quis, vehicula eget dolor. Aliquam vulputate tincidunt euismod. 
+                        Maecenas vitae diam tellus. Donec vulputate elit et nisl pretium luctus. Vestibulum quis molestie dui. 
+                        Aenean et auctor velit, a sagittis massa. Sed eget magna dignissim, feugiat neque vel, auctor massa. 
+                        Nulla sem tortor, ultricies et feugiat a, tempor vitae lectus. Phasellus fermentum posuere vehicula...
+                    </p>
+                    <p><a href="./articles.html">See Details >></a></p>
+                </div>
+            </div>
+
+            <div class="row article-section">
+                <div class="col-37 article-thumbnail">
+                    <a href="./articles.html">
+                        <img 
+                            src="./assets/images/retreat-article.jpg"
+                            alt="Dog with sunglasses on a beach towel on a boat"
+                        />
+                    </a>
+                </div>
+                <div class="col-63 article-text">
+                    <h4><a href="./articles.html">How to Plan for a Weekend Retreat with Pets</a></h4>
+                    <h5>by Alyx G, Muddy Paws Co-Owner</h5>
+                    <p>
+                        Donec elit elit, varius eu imperdiet quis, vehicula eget dolor. Aliquam vulputate tincidunt euismod. 
+                        Maecenas vitae diam tellus. Donec vulputate elit et nisl pretium luctus. Vestibulum quis molestie dui. 
+                        Aenean et auctor velit, a sagittis massa. Sed eget magna dignissim, feugiat neque vel, auctor massa. 
+                        Nulla sem tortor, ultricies et feugiat a, tempor vitae lectus. Phasellus fermentum posuere vehicula...
+                    </p>
+                    <p><a href="./articles.html">See Details >></a></p>
+                </div>
+            </div>
+
+            <a href="./articles.html"><button class="articles-button">View All Articles</button></a>
         </section> <!-- recent-articles -->
 
     </main>
