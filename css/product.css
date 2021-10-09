@@ -1,1 +1,142 @@
 /* Styling for Product Details Page of Muddy Paws */
+
+.breadcrumbs {
+  text-align: left;
+  display: block;
+  margin-bottom: 15px;
+  border-top: 1px solid #fff;
+  padding-top: 15px;
+}
+
+/* IMAGE CAROUSEL */
+
+.image-choices img {
+  padding: 10px;
+}
+
+.image-highlight {
+}
+
+/* PRODUCT TEXT */
+
+.product-text {
+  display: block;
+  padding-left: 25px;
+}
+
+.product-text h2 {
+  text-align: left;
+}
+
+#description {
+  line-height: 1.75em;
+}
+
+/* COLORS */
+
+.color-icon {
+  margin-right: 5px;
+}
+
+.color-choices {
+  margin: 10px 0px;
+}
+
+/* SIZE */
+.size-options {
+  margin-bottom: 15px;
+}
+
+.size-menu {
+  font-family: "Cabin", sans-serif;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* QUANTITY */
+
+.quantity-option {
+  margin-bottom: 15px;
+}
+
+#quantity {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* AVAILABILITY */
+.availability {
+  position: relative;
+  border-radius: 15px;
+  border: 1px solid white;
+  font-size: 0.8em;
+  padding: 6px 15px 6px 0px;
+  width: 140px;
+}
+
+.availability p {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+
+#checkmark,
+#out-of-stock {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+}
+
+/* ADD TO BAG */
+
+.add-to-bag {
+  text-align: left;
+}
+
+#add-to-bag {
+  background-color: #516d00;
+}
+
+#add-to-bag:hover {
+  background-color: #a45e0c;
+}
+
+/* REVIEWS */
+
+/* Ratings */
+.rating {
+  margin-top: 0.5em;
+  position: relative;
+  text-align: left;
+}
+
+.rating img {
+  padding: 0px;
+}
+
+.rating p {
+  display: inline-block;
+  font-style: italic;
+  font-size: 0.8em;
+
+  position: absolute;
+  left: 105px;
+  bottom: 0px;
+}
+
+.review-preview {
+  margin-bottom: 10px;
+  background-color: rgba(91, 109, 0, 0.5);
+  padding: 12px;
+  border-radius: 8px;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.25));
+}
+
+.product-reviews p {
+  line-height: 1.25 em;
+  margin-bottom: 0.25em;
+}
+
+.load-more {
+  text-align: center;
+}

@@ -15,8 +15,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="css/styles.css">
-<link rel="stylesheet" type="text/css" href="css/product.css">
+<link rel="stylesheet" type="text/css" href="./css/styles.css">
+<link rel="stylesheet" type="text/css" href="./css/product.css">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -59,125 +59,139 @@
     
     
         <main> <!-- Main Container -->
-    
-            <!--HOME BANNER-->
-            <section class="home-banner">
-                <div class="banner-container"> <!--contains background image?-->
-                    <div class="banner-overlay"> <!--orange overlay-->
-                        <h2>Tackle any trek!</h2>
-                        <p>At Muddy Paws, we offer robust gear for dogs and cats to help pet lovers make the 
-                            most of any outdoor adventure. We opened this store as a way to serve and connect 
-                            a community of nature and animal lovers.
-                        </p>
-                        <p class="banner-button">
-                            <a href="./about-us.html"><button id="banner-button">Read Our Story >></button></a>
-                        </p>
-                </div>
-            </section> <!-- home-banner -->
-    
-            <!-- FEATURED PRODUCTS SECTION -->
-            <section id="featured-products">
-                <h2>Featured Gear</h2>
-                <h3>
-                    All products are available for pickup in-store or delivery, inventory permitting.
-                </h3>
-    
-                <div class="row featured-row">
-                    <div class="col-50 featured-product">
-                        <div class="row">
-                            <div class="col-50 product-thumbnail">
-                                <a href="./cat-gps-tracker-collar.html">
-                                    <img src="./assets/images/cat-gps-collar.png" alt="Cat with GPS Tracker Collar"/>
-                                </a>
+            <div class="breadcrumbs">
+                <a href="./shop.html">Shop</a>  >  
+                <span class="current-page">Cat GPS Tracker Collar</span>
+            </div>
+
+            <section class="product-details">
+                <div class="row">
+                    <div class="col-50 product-images">
+                        <div class="image-highlight">
+                            <img src="./assets/images/cat-gps-collar.png"
+                                alt="Black and white cat with GPS Tracker Collar"
+                                width="100%" height="auto"
+                            />
+                        </div>
+                        <div class="row image-choices">
+                            <div class="col-25">
+                                <img src="./assets/images/cat-gps-collar.png"
+                                alt="Black and white cat with GPS Tracker Collar"
+                                width="100%" height="auto"
+                            />
                             </div>
-                            <div class="col-50 product-text">
-                                <h4><a href="./cat-gps-tracker-collar.html">Cat GPS Tracker Collar</a></h4>
-                                <p>
-                                    Morbi dapibus mauris sit amet mi vestibulum, ut hendrerit mi elementum. Quisque 
-                                    feugiat massa et neque faucibus, porta posuere lorem vehicula. Phasellus aliquam 
-                                    justo vitae consectetur imperdiet...
-                                </p>
-                                <p><a href="./cat-gps-tracker-collar.html">See Details >></a></p>
+                            <div class="col-25">
+                                <img src="./assets/images/cat-gps-collar.png"
+                                alt="Black and white cat with GPS Tracker Collar"
+                                width="100%" height="auto"
+                            />
+                            </div>
+                            <div class="col-25">
+                                <img src="./assets/images/cat-gps-collar.png"
+                                alt="Black and white cat with GPS Tracker Collar"
+                                width="100%" height="auto"
+                            />
+                            </div>
+                            <div class="col-25">
+                                <img src="./assets/images/cat-gps-collar.png"
+                                alt="Black and white cat with GPS Tracker Collar"
+                                width="100%" height="auto"
+                            />
                             </div>
                         </div>
                     </div>
-    
-                    <div class="col-50 featured-product">
-                        <div class="row">
-                            <div class="col-50 product-thumbnail">
-                                <a href="./dog-harness.html">
-                                    <img src="./assets/images/dog-harness.jpg" alt="Cat with GPS Tracker Collar"/>
-                                </a>
-                            </div>
-                            <div class="col-50 product-text">
-                                <h4><a href="./dog-harness.html">Dog Harness</a></h4>
-                                <p>
-                                    Morbi dapibus mauris sit amet mi vestibulum, ut hendrerit mi elementum. Quisque 
-                                    feugiat massa et neque faucibus, porta posuere lorem vehicula. Phasellus aliquam 
-                                    justo vitae consectetur imperdiet...
-                                </p>
-                                <p><a href="./dog-harness.html">See Details >></a></p>
+
+                    <div class="col-50 product-text">
+                        <h2>Cat GPS Tracker Collar</h2>
+                        <p id="description">
+                            Donec elit elit, varius eu imperdiet quis, vehicula eget dolor. 
+                            Aliquam vulputate tincidunt euismod. Maecenas vitae diam tellus. 
+                            Donec vulputate elit et nisl pretium luctus. Vestibulum quis 
+                            molestie dui. Aenean et auctor velit, a sagittis massa. Sed eget 
+                            magna dignissim, feugiat neque vel, auctor massa.
+                        </p>
+
+                        <h4 class="pricing">$19.99</h4>
+                        <div class="color-choices">
+                            <div class="color-icon strawb"></div>
+                            <div class="color-icon blackb active-color"></div>
+                            <div class="color-icon crazyb"></div>
+                            <div class="color-icon fireorange"></div>
+                        </div>
+                        <div class="size-options">
+                            <label for="size-menu">Size:</label>
+                            <div class="size-menu">
+                                <select id="size-menu">
+                                    <option value="tiny">Tiny</option>
+                                    <option value="small">Small</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="large">Large</option>
+                                </select>
                             </div>
                         </div>
-                    </div>
-                </div> <!-- 50-50-row -->
-                <a href="./shop.html"><button class="shop-button">Shop All Gear</button></a>
-            </section> <!-- featured-products -->
-    
-            <!-- RECENT ARTICLES SECTION -->
-            <section id="recent-articles">
-                <h2>Recent Articles</h2>
-                <h3>
-                    Our residential pet experts write about how to use Muddy Paws gear and prep your pet for an outdoor adventure!
-                </h3>
-    
-                <div class="row article-section">
-                    <div class="col-37 article-thumbnail">
-                        <a href="./articles.html">
-                            <img 
-                            src="./assets/images/cat-article.jpg"
-                            alt="Cat and Kermit plushie sitting in a suitcase in the forest"
+                        <div class="quantity-option">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" id="quantity" step="1" value="1" min="0" max="10">
+                        </div>
+                        <div class="availability">
+                            <p>Currently in Stock</p>
+                            <img src="./assets/icons/checkmark.svg" id="checkmark"
+                                alt="check mark"
+                                height="12px" width="12px"
                             />
-                        </a>
-                    </div>
-                    <div class="col-63 article-text">
-                        <h4><a href="./articles.html">My Favorite Gear for Camping with My Cat</a></h4>
-                        <h5>by Martina Tan, Muddy Paws Pet Expert</h5>
-                        <p>
-                            Donec elit elit, varius eu imperdiet quis, vehicula eget dolor. Aliquam vulputate tincidunt euismod. 
-                            Maecenas vitae diam tellus. Donec vulputate elit et nisl pretium luctus. Vestibulum quis molestie dui. 
-                            Aenean et auctor velit, a sagittis massa. Sed eget magna dignissim, feugiat neque vel, auctor massa. 
-                            Nulla sem tortor, ultricies et feugiat a, tempor vitae lectus. Phasellus fermentum posuere vehicula...
+                        </div>
+
+                        <p class="add-to-bag">
+                            <button id="add-to-bag">Add to Bag</button>
                         </p>
-                        <p><a href="./articles.html">See Details >></a></p>
                     </div>
                 </div>
-    
-                <div class="row article-section">
-                    <div class="col-37 article-thumbnail">
-                        <a href="./articles.html">
-                            <img 
-                                src="./assets/images/retreat-article.jpg"
-                                alt="Dog with sunglasses on a beach towel on a boat"
+            </section> <!-- product-details -->
+
+
+            <section class="product-reviews">
+                <h2>Reviews for This Product</h2>
+                <div class="row">
+                    <div class="col-25 review-left">
+                        <div class="rating">
+                            <img src="./assets/icons/rating-4stars.svg"
+                                alt="4 out of 5 stars average rating"
+                                height="36px" width="150px"
                             />
-                        </a>
+                        </div>
+                        <p>Average Rating: 4 out of 5</p>
+                        <p>7 Reviews</p>
                     </div>
-                    <div class="col-63 article-text">
-                        <h4><a href="./articles.html">How to Plan for a Weekend Retreat with Pets</a></h4>
-                        <h5>by Alyx G, Muddy Paws Co-Owner</h5>
-                        <p>
-                            Donec elit elit, varius eu imperdiet quis, vehicula eget dolor. Aliquam vulputate tincidunt euismod. 
-                            Maecenas vitae diam tellus. Donec vulputate elit et nisl pretium luctus. Vestibulum quis molestie dui. 
-                            Aenean et auctor velit, a sagittis massa. Sed eget magna dignissim, feugiat neque vel, auctor massa. 
-                            Nulla sem tortor, ultricies et feugiat a, tempor vitae lectus. Phasellus fermentum posuere vehicula...
-                        </p>
-                        <p><a href="./articles.html">See Details >></a></p>
+
+                    <div class="col-50 review-right">
+                        <div class="review-preview">
+                            <h4>Decent Quality for relatively low price</h4> <span class="review-author">by Omeir K</span>
+                            <p>
+                                Donec elit elit, varius eu imperdiet quis, vehicula eget dolor. Aliquam vulputate tincidunt euismod. 
+                                Maecenas vitae diam tellus. Donec vulputate elit et nisl pretium luctus... 
+                                <a href="./articles.html">Read More</a>
+                            </p>
+                        </div>
+
+                        <div class="review-preview">
+                            <h4>This collar does not fit my dog :(</h4> <span class="review-author">by Allen Z</span>
+                            <p>
+                                Donec elit elit, varius eu imperdiet quis, vehicula eget dolor. Aliquam vulputate tincidunt euismod. 
+                                Maecenas vitae diam tellus. Donec vulputate elit et nisl pretium luctus... 
+                                <a href="./articles.html">Read More</a>
+                            </p>
+                        </div>
+
+                        <div class="load-more">
+                            <button class="reviews-button">Load More Reviews</button>
+                        </div>
                     </div>
+
+                    <div class="col-25 review-left">
+                    </div>
+
                 </div>
-    
-                <a href="./articles.html"><button class="articles-button">View All Articles</button></a>
-            </section> <!-- recent-articles -->
-    
+            </section> <!-- product-details -->
         </main>
     
         <!-- Footer Nav -->
