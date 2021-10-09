@@ -59,7 +59,135 @@
     
     
         <main> <!-- Main Container -->
-    
+            <div class="breadcrumbs">
+                <a href="./shop.html">Shop</a>  >  
+                <span class="current-page">Dog Harness</span>
+            </div>
+
+            <section class="product-details">
+                <div class="row">
+                    <div class="col-50 product-images">
+                        <div class="image-highlight">
+                            <img src="./assets/images/dog-harness.jpg"
+                                alt="A large and small dog, both with pink harnesses"
+                                width="100%" height="auto"
+                            />
+                        </div>
+                        <div class="row image-choices">
+                            <div class="col-25">
+                                <img src="./assets/images/dog-harness.jpg"
+                                alt="A large and small dog, both with pink harnesses"
+                                width="100%" height="auto"
+                            />
+                            </div>
+                            <div class="col-25">
+                                <img src="./assets/images/dog-harness.jpg"
+                                alt="A large and small dog, both with pink harnesses"
+                                width="100%" height="auto"
+                            />
+                            </div>
+                            <div class="col-25">
+                                <img src="./assets/images/dog-harness.jpg"
+                                alt="A large and small dog, both with pink harnesses"
+                                width="100%" height="auto"
+                            />
+                            </div>
+                            <div class="col-25">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-50 product-text">
+                        <h2>Dog Harness</h2>
+                        <p id="description">
+                            Donec elit elit, varius eu imperdiet quis, vehicula eget dolor. 
+                            Aliquam vulputate tincidunt euismod. Maecenas vitae diam tellus. 
+                            Donec vulputate elit et nisl pretium luctus. Vestibulum quis 
+                            molestie dui. Aenean et auctor velit, a sagittis massa. Sed eget 
+                            magna dignissim, feugiat neque vel, auctor massa.
+                        </p>
+
+                        <h4 class="pricing">$29.99</h4>
+                        <div class="color-choices">
+                            <div class="color-icon strawb active-color"></div>
+                            <div class="color-icon blackb"></div>
+                            <div class="color-icon crazyb"></div>
+                            <div class="color-icon fireorange"></div>
+                        </div>
+                        <div class="size-options">
+                            <label for="size-menu">Size:</label>
+                            <div class="size-menu">
+                                <select id="size-menu">
+                                    <option value="tiny">Tiny</option>
+                                    <option value="small">Small</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="large">Large</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="quantity-option">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" id="quantity" step="1" value="1" min="0" max="10">
+                        </div>
+                        <div class="availability">
+                            <p>Out of Stock</p>
+                            <img src="./assets/icons/x.svg" id="out-of-stock"
+                                alt="X mark"
+                                height="12px" width="12px"
+                            />
+                        </div>
+
+                        <p class="add-to-bag">
+                            <button id="add-to-bag">Add to Bag</button>
+                        </p>
+                    </div>
+                </div>
+            </section> <!-- product-details -->
+
+
+            <section class="product-reviews">
+                <h2>Reviews for This Product</h2>
+                <div class="row">
+                    <div class="col-25 review-left">
+                        <div class="rating">
+                            <img src="./assets/icons/rating-4stars.svg"
+                                alt="4 out of 5 stars average rating"
+                                height="36px" width="150px"
+                            />
+                        </div>
+                        <p>Average Rating: 4 out of 5</p>
+                        <p>24 Reviews</p>
+                    </div>
+
+                    <div class="col-50 review-right">
+                        <div class="review-preview">
+                            <h4>Still intact after an Ohiopyle splash!</h4> <span class="review-author">by Amy W</span>
+                            <p>
+                                Donec elit elit, varius eu imperdiet quis, vehicula eget dolor. Aliquam vulputate tincidunt euismod. 
+                                Maecenas vitae diam tellus. Donec vulputate elit et nisl pretium luctus... 
+                                <a href="./articles.html">Read More</a>
+                            </p>
+                        </div>
+
+                        <div class="review-preview">
+                            <h4>Sooo cute</h4> <span class="review-author">by Animesh S</span>
+                            <p>
+                                Donec elit elit, varius eu imperdiet quis, vehicula eget dolor. Aliquam vulputate tincidunt euismod. 
+                                Maecenas vitae diam tellus. Donec vulputate elit et nisl pretium luctus... 
+                                <a href="./articles.html">Read More</a>
+                            </p>
+                        </div>
+
+                        <div class="load-more">
+                            <button class="reviews-button">Load More Reviews</button>
+                        </div>
+                    </div>
+
+                    <div class="col-25 review-left">
+                    </div>
+
+                </div>
+            </section> <!-- product-details -->
         </main>
     
         <!-- Footer Nav -->
