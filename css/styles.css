@@ -12,4 +12,45 @@
 
 body {
   font-family: "Cabin", sans-serif;
+  background-color: #3a3f0d;
+  color: #ffffff;
+}
+
+.header-nav li {
+  list-style-type: none;
+  font-family: "Coustard", serif;
+}
+
+.header-nav a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+p {
+  color: #ffffff;
+}
+
+a {
+  color: #ed9026;
+}
+
+h1,
+h2 {
+  font-family: "Coustard", serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.75em;
+}
+
+h3 {
+  font-family: "Cabin", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.4em;
 }
