@@ -6,7 +6,7 @@ HW 5 and 6A/6B for Programming Usable Interfaces at CMU, Fall 2021
 Images are taken from Unsplash and Pixabay, so thanks to all the amazing contributors there!
 
 See HW 5 website here: https://martinatan.github.io/pui-hw5-and-hw6/homework_5/
-See HW 6A website here: https://martinatan.github.io/pui-hw5-and-hw6/homework_6a/
+See HW 6A website here: https://martinatan.github.io/pui-hw5-and-hw6/homework_6a/index.html
 See HW 6B website here: (TBD)
 
 # NOTES for HW 5
