@@ -15,8 +15,8 @@ and Product Details pages. You can view them by clicking on "Articles" and "Abou
 on the header and footer nav menus.
 
 I have also coded more than one product detail page. The two pages you can view are for
-the Dog Harness (https://martinatan.github.io/homework_5/dog-harness.html) and the
-Cat GPS Tracker Collar (https://martinatan.github.io/homework_5/cat-gps-tracker-collar.html).
+the Dog Harness (https://martinatan.github.io/pui-hw5-and-hw6/homework_5/dog-harness.html) and the
+Cat GPS Tracker Collar (https://martinatan.github.io/pui-hw5-and-hw6/homework_5/cat-gps-tracker-collar.html).
 
 # NOTES for HW 6A
 
