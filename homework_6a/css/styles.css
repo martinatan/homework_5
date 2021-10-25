@@ -97,6 +97,16 @@ header {
   right: 0;
 }
 
+/* Shopping Bag Icon and Quantity */
+#bag-quantity {
+  /* idealized positioning for a quantity of "1" */
+  font-size: 8pt; /* change to 7pt for two digits */
+
+  position: absolute;
+  top: 11px;
+  right: 11px; /* change to 10px for two digits */
+}
+
 #search-bar {
   font-family: "Cabin", sans-serif;
   width: 100%;

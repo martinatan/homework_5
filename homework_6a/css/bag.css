@@ -1,0 +1,23 @@
+/* Styling for Shopping Bag Page of Muddy Paws */
+
+/* Return to Shopping Button */
+
+#intro {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+#return-button {
+  background-color: #516d00;
+}
+
+#return-button:hover {
+  background-color: #a45e0c;
+}
+
+/* BAG SECTION */
+
+#bag {
+  /*display: none;*/ /* Bag is not displayed unless contains 1+ items */
+  border-top: 1px solid #fff;
+}
