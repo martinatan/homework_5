@@ -66,7 +66,7 @@
         <main> <!-- Main Container -->
     
             <section id="intro">
-                <h1 id="bag-heading"></h1> <!--"Your shopping bag is empty" or "Shopping Bag"-->
+                <h1 id="bag-heading">Shopping Bag</h1> <!--"Your shopping bag is empty" or "Shopping Bag"-->
                 <h3 id="bag-subheading"></h3> <!--subheading text-->
                 <a href="./shop.html"><button id="return-button"><< Return to Shopping</button></a>
             </section> <!-- bag-intro -->
@@ -74,12 +74,84 @@
             <section id="bag">
                 <!-- JavaScript for Bag population inserts here -->
                 <div class="row bag-section">
-                    <div class="col-63 bag-items">
-                        <
+                    <div class="col-75 bag-items">
+                        <h4>Your Shopping Bag</h4>
+                        <table id="items-table">
+                            <tr id="items-headings">
+                                <th id="items-th">Items</th>
+                                <th id="quant-th">Quantity</th>
+                                <th id="price-th">Price</th>
+                            </tr>
+                            <tr>
+                                <td class="items-td">
+                                    <div class="row item-details">
+                                        <div class="col-25 thumbnail">
+                                            <img src="./assets/images/dog-harness.jpg"
+                                                alt="A large and small dog, both with pink harnesses"
+                                                width="100%" height="auto"
+                                            />
+                                        </div>
+                                        <div class="col-75 item-descript">
+                                            <p><a href="./dog-harness.html">Dog Harness</a></p>
+                                            <p>Size: Tiny</p>
+                                            <p>Color: Fire Orange
+                                                <span class="color-icon fireorange active-color"></span>
+                                            </p>
+                                        </div> 
+                                    </div>
+                                </td>
+                                <td class="quant-td">
+                                    <label id="quant-label" for="quantity">Quantity:</label>
+                                    <input type="number" id="quantity" step="1" value="1" min="0" max="10">
 
+                                    <div>
+                                        <input type="radio" id="delivery" name="deliv-or-pickup" value="delivery" checked>
+                                            <label for="delivery">Ship to address</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="pickup" name="deliv-or-pickup" value="delivery">
+                                            <label for="pickup">Pick up at store – Free</label>
+                                    </div>
+                                </td>
+                                <td class="price-td">
+                                    <h4>$19.99</h4>
+                                    <p id="per-price">($19.99 each)</p>
+                                </td>
+                            </tr>
+                        </table>
 
                     </div> <!-- bag-items -->
-                    <div class="col-37 bag-summary">
+                    <div class="col-25 bag-summary">
+                        <h4 id="summary-heading">Order Summary</h4>
+                        <div id="summary-table">
+                            <table>
+                                <tr>
+                                    <th>   
+                                        Type of Fee
+                                    </th>
+                                    <th>
+                                        Amount
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td id="subtotal-lbl">Subtotal</td>
+                                    <td id="subtotal-amt">$19.99</td>
+                                </tr>
+                                <tr>
+                                    <td id="taxes-fees-lbl">Taxes and Fees</td>
+                                    <td id="taxes-fees-amt">$3.02</td>
+                                </tr>
+                                <tr>
+                                    <td id="shipping-lbl">Estimated Shipping</td>
+                                    <td id="shipping-amt">$9.99</td>
+                                </tr>
+                                <tr>
+                                    <td id="total-lbl">Total</td>
+                                    <td id="total-amt">$33.00</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <a href="./#" id="checkout-button"><button>Proceed to Checkout >></button></a>
 
                     </div>  <!-- bag-summary -->
                 </div>
