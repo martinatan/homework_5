@@ -19,7 +19,11 @@ the Dog Harness (https://martinatan.github.io/pui-hw5-and-hw6/homework_5/dog-har
 Cat GPS Tracker Collar (https://martinatan.github.io/pui-hw5-and-hw6/homework_5/cat-gps-tracker-collar.html).
 
 # NOTES for HW 6A
+The Shopping Bag page, to view all items in the Bag, can be reached by clicking on the Bag icon
+in the top right of aany page on the website.
 
-
+You can test the editable Product Detail page with feedback by going to the Product Detail page
+for the Cat GPS Tracker Collar. Or you can reach the page directly at the following URL:
+https://martinatan.github.io/pui-hw5-and-hw6/homework_6a/bag.html
 
 Thanks for viewing! I hope you enjoy exploring the prototype.
