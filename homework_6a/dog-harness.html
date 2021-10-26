@@ -117,15 +117,15 @@
 
                         <h4 class="pricing">$29.99</h4>
                         <div class="color-choices" id="color-choices">
-                            <div class="color-icon strawb active-color"></div>
-                            <div class="color-icon blackb"></div>
-                            <div class="color-icon crazyb"></div>
-                            <div class="color-icon fireorange"></div>
+                            <div class="color-icon strawb active-color" onclick="activateColor('strawb')"></div>
+                            <div class="color-icon blackb" onclick="activateColor('blackb')"></div>
+                            <div class="color-icon crazyb" onclick="activateColor('crazyb')"></div>
+                            <div class="color-icon fireorange" onclick="activateColor('fireorange')"></div>
                         </div>
                         <div class="size-options">
                             <label for="size-menu">Size:</label>
                             <div class="size-menu">
-                                <select id="size-menu">
+                                <select id="size-menu" onchange="updateDisplay()">
                                     <option value="tiny">Tiny</option>
                                     <option value="small">Small</option>
                                     <option value="medium">Medium</option>
@@ -138,13 +138,14 @@
                             <input type="number" id="quantity" step="1" value="1" min="0" max="10">
                         </div>
                         <div class="availability">
-                            <p>Out of Stock</p>
-                            <img src="./assets/icons/x.svg" id="out-of-stock"
-                                alt="X mark"
+                            <p>Currently in Stock</p>
+                            <img src="./assets/icons/checkmark.svg" id="checkmark"
+                                alt="check mark"
                                 height="12px" width="12px"
                             />
                         </div>
 
+                        <div id="selection-summary"></div>
                         <p class="add-to-bag">
                             <button id="add-to-bag" onclick="addToBag()">Add to Bag</button>
                         </p>

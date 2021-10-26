@@ -121,15 +121,15 @@
 
                         <h4 class="pricing">$19.99</h4>
                         <div class="color-choices" id="color-choices">
-                            <div class="color-icon strawb"></div>
-                            <div class="color-icon blackb active-color"></div>
-                            <div class="color-icon crazyb"></div>
-                            <div class="color-icon fireorange"></div>
+                            <div class="color-icon strawb" onclick="activateColor('strawb')"></div>
+                            <div class="color-icon blackb active-color" onclick="activateColor('blackb')"></div>
+                            <div class="color-icon crazyb" onclick="activateColor('crazyb')"></div>
+                            <div class="color-icon fireorange" onclick="activateColor('fireorange')"></div>
                         </div>
                         <div class="size-options">
                             <label for="size-menu">Size:</label>
                             <div class="size-menu">
-                                <select id="size-menu">
+                                <select id="size-menu" onchange="updateDisplay()">
                                     <option value="tiny">Tiny</option>
                                     <option value="small">Small</option>
                                     <option value="medium">Medium</option>
@@ -149,6 +149,7 @@
                             />
                         </div>
 
+                        <div id="selection-summary"></div>
                         <p class="add-to-bag">
                             <button id="add-to-bag" onclick="addToBag()">Add to Bag</button>
                         </p>
