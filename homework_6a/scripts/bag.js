@@ -34,7 +34,6 @@
 
 
 
-
 //make bag CSS visible
 
 
@@ -52,3 +51,5 @@
 
 
 */
+
+console.log("Hello world bag");

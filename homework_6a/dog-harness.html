@@ -5,6 +5,10 @@
 <meta charset="utf-8">
 <title>Muddy Paws - Dog Harness </title>
 
+<script type="text/javascript" src="./scripts/bag.js"></script>
+<script type="text/javascript" src="./scripts/script.js"></script>
+<script type="text/javascript" src="./scripts/product.js"></script>
+
 <!--Coustard font link-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -102,7 +106,7 @@
                     </div>
 
                     <div class="col-50 product-text">
-                        <h2>Dog Harness</h2>
+                        <h2 id="product-name">Dog Harness</h2>
                         <p id="description">
                             Donec elit elit, varius eu imperdiet quis, vehicula eget dolor. 
                             Aliquam vulputate tincidunt euismod. Maecenas vitae diam tellus. 
@@ -112,7 +116,7 @@
                         </p>
 
                         <h4 class="pricing">$29.99</h4>
-                        <div class="color-choices">
+                        <div class="color-choices" id="color-choices">
                             <div class="color-icon strawb active-color"></div>
                             <div class="color-icon blackb"></div>
                             <div class="color-icon crazyb"></div>
@@ -142,7 +146,7 @@
                         </div>
 
                         <p class="add-to-bag">
-                            <button id="add-to-bag">Add to Bag</button>
+                            <button id="add-to-bag" onclick="addToBag()">Add to Bag</button>
                         </p>
                     </div>
                 </div>
