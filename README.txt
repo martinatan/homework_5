@@ -7,7 +7,7 @@ Images are taken from Unsplash and Pixabay, so thanks to all the amazing contrib
 
 See HW 5 website here: https://martinatan.github.io/pui-hw5-and-hw6/homework_5/
 See HW 6A website here: https://martinatan.github.io/pui-hw5-and-hw6/homework_6a/index.html
-See HW 6B website here: (TBD)
+See HW 6B website here: https://martinatan.github.io/pui-hw5-and-hw6/homework_6b/index.html
 
 # NOTES for HW 5
 I have coded the Articles and About Us pages in addition to the required Home, Shop, 
@@ -27,5 +27,8 @@ You can test the editable Product Detail page with feedback by going to the Prod
 for the Cat GPS Tracker Collar OR the Dog Harness. The color, size, and quantity can all be changed with
 feedback on the page, and these product settings can then be added to the Bag by clicking the "Add to Bag"
 button. See how the quantity in the shopping bag icon increases as you Add to Bag!
+
+# NOTES for HW 6B
+
 
 Thanks for viewing! I hope you enjoy exploring the prototype.

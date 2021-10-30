@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="At Muddy Paws, we offer robust gear for dogs and cats to help pet lovers make the most of any outdoor adventure.">
+
+<title>Muddy Paws - Shop </title>
+
+<script type="text/javascript" src="./scripts/bag.js"></script>
+<script type="text/javascript" src="./scripts/script.js"></script>
+
+<!--Coustard font link-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Coustard:wght@400;900&display=swap" rel="stylesheet">
+
+<!--Cabin font link-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="./css/styles.css">
+<link rel="stylesheet" type="text/css" href="./css/shop.css">
+
+</head>
+
+<body>
+    <!--Header Nav-->
+    <header>
+        
+        <nav class="header-nav">
+            <ul>
+                <li><a href="./index.html" id="logo-home-nav">
+                    <img
+                        src="./assets/images/muddy-paws-logo.svg"
+                        alt="Muddy Paws Adventure Gear logo with pawprints"
+                        height="52px" width="175px"/>
+                </a></li>
+                <li>
+                    <img id="active-icon-left" src="./assets/icons/paw-left.svg" alt="Orange pawprint icon" width="18px" height="18px"/>
+                    <span style="color:#ed9026">Shop</span>
+                    <img id="active-icon-right" src="./assets/icons/paw-right.svg" alt="Orange pawprint icon" width="18px" height="18px"/>
+                </li>
+                <li><a href="./articles.html">Articles</a></li>
+                <li><a href="./about-us.html">About Us</a></li>
+                <li style="margin-right:15px;"><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-extras">
+            <span id="bag-quantity"></span>
+
+            <div class="header-extras-top">
+                <a href="./bag.html">
+                    <img id="shopping-bag"
+                        src="./assets/icons/bag-icon.svg"
+                        alt="Shopping Bag icon"
+                        height="25px" width="25px"/>
+                </a>
+            </div>
+            <div class="header-extras-bottom">
+                <input id="search-bar" type="text" placeholder="Search...">
+            </div>
+        </div>
+
+    </header>
+
+
+    <main> <!-- Main Container -->
+
+        <section id="intro">
+            <h1>Shop</h1>
+            <h3>Browse our most popular products, or select some filters to get to what you need. <br>
+                All items can be delivered or picked up in-store, when marked as in-stock.</h3>
+        </section>
+
+        <section id="filter-options">
+            <div class="row all-options">
+                <div class="col-12-5 filter-species">
+                    <h6>Species</h6>
+                    <input type="checkbox" id="dog" name="species" value="Dog"><label for="dog">Dog</label><br>
+                    <input type="checkbox" id="cat" name="species" value="Cat"><label for="cat">Cat</label>
+                </div>
+                <div class="col-25 filter-size">
+                    <h6>Size</h6>
+                    <row class="col-50 size-left">
+                        <input type="checkbox" id="tiny" name="size" value="Tiny"><label for="tiny">Tiny</label><br>
+                        <input type="checkbox" id="small" name="size" value="Small"><label for="small">Small</label>
+                    </row>
+                    <row class="col-50 size-right">
+                        <input type="checkbox" id="medium" name="size" value="Medium"><label for="medium">Medium</label><br>
+                    <input type="checkbox" id="large" name="size" value="Large"><label for="large">Large</label>
+                    </row>
+                </div>
+                <div class="col-50 filter-color">
+                    <h6>Color</h6>
+                    <row class="col-50 color-left">
+                        <input type="checkbox" id="strawb" name="color" value="Strawberry">
+                            <label for="strawb">
+                                <div class="color-icon strawb"></div>Strawberry
+                            </label><br>
+                        <input type="checkbox" id="blackb" name="color" value="Blackberry">
+                            <label for="blackb">
+                                <div class="color-icon blackb"></div>Blackberry
+                            </label>
+                    </row>
+                    <row class="col-50 color-right">
+                        <input type="checkbox" id="crazyb" name="color" value="Crazyberry">
+                            <label for="crazyb">
+                                <div class="color-icon crazyb"></div>Crazyberry
+                            </label><br>
+                        <input type="checkbox" id="fireorange" name="color" value="Fire Orange">
+                            <label for="fireorange">
+                                <div class="color-icon fireorange"></div>Fire Orange
+                            </label>
+                    </row>
+                </div>
+                <div class="col-12-5 filter-availability">
+                    <h6>Availability</h6>
+                    <input type="checkbox" id="in-stock" name="availability" value="in-stock">
+                    <label for="in-stock">Currently in Stock</label>
+                </div>
+            </div>
+            <div class="filter-clear-all">
+                <button id="clear-filters">
+                    <img src="./assets/icons/clear-icon.svg" id="clear-icon"
+                    alt="clear icon" width="14px" height="14px"/>
+                    Clear All Filters
+                </button>
+            </div>
+        </section>
+
+        <section id="results">
+            <div id="sort-by">
+                <label for="sort-menu">Sort By:</label>
+                <div class="sort-menu">
+                    <select id="sort-menu">
+                        <option value="bestsellers">Bestsellers</option>
+                        <option value="price-low-high">Price: Low to High</option>
+                        <option value="price-high-low">Price: High to Low</option>
+                        <option value="most-recent">Most Recent</option>
+                        <option value="top-rated">Top Rated</option>
+                        <option value="a-to-z">Name: A to Z</option>
+                        <option value="z-to-a">Name: Z to A</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="products-grid">
+
+                <div class="row">
+                    <div class="col-25 product-preview" id="cat-carrier">
+                        <div class="thumbnail">
+                            <!-- <a href=""> -->
+                                <img src="./assets/images/cat-carrier.jpg"
+                                alt="Orange cat carrier backpack with grey cat peeking out of it"
+                                />
+                            <!-- </a> -->
+                        </div>
+                        <div class="product-meta">
+                            <div class="color-choices">
+                                <div class="color-icon strawb"></div>
+                                <div class="color-icon crazyb"></div>
+                                <div class="color-icon fireorange active-color"></div>
+                            </div>
+                            <p class="product-name"><a href="#">Cat Carrier Backpack</a></p>
+                            <div class="rating">
+                                <img src="./assets/icons/rating-4stars.svg"
+                                    alt="4 out of 5 stars average rating"
+                                    height="24px" width="100px"
+                                />
+                                <p>(15)</p>
+                            </div>
+                            <p class="price">$59.99</p>
+                            <div class="availability">
+                                <p>Currently in Stock</p>
+                                <img src="./assets/icons/checkmark.svg" id="checkmark"
+                                    alt="check mark"
+                                    height="12px" width="12px"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-25 product-preview" id="dog-harness">
+                        <div class="thumbnail">
+                            <a href="./dog-harness.html">
+                                <img src="./assets/images/dog-harness.jpg"
+                                alt="A large and small dog, both with pink harnesses"
+                                />
+                            </a>
+                        </div>
+                        <div class="product-meta">
+                            <div class="color-choices">
+                                <div class="color-icon strawb active-color"></div>
+                                <div class="color-icon blackb"></div>
+                                <div class="color-icon crazyb"></div>
+                                <div class="color-icon fireorange"></div>
+                            </div>
+                            <p class="product-name">
+                                <a href="./dog-harness.html">Dog Harness</a>
+                            </p>
+                            <div class="rating">
+                                <img src="./assets/icons/rating-4stars.svg"
+                                    alt="4 out of 5 stars average rating"
+                                    height="24px" width="100px"
+                                />
+                                <p>(24)</p>
+                            </div>
+                            <p class="price">$29.99</p>
+                            <div class="availability">
+                                <p>Currently in Stock</p>
+                                <img src="./assets/icons/checkmark.svg" id="checkmark"
+                                    alt="check mark"
+                                    height="12px" width="12px"
+                                />
+                            </div>
+                        </div>
+                          
+
+                    </div>
+                    <div class="col-25 product-preview" id="dog-gps-tracker">
+                        <div class="thumbnail">
+                            <!-- <a href=""> -->
+                                <img src="./assets/images/dog-gps-collar.jpg"
+                                alt="Large brown dog with purple GPS tracker collar"
+                                />
+                            <!-- </a> -->
+                        </div>
+                        <div class="product-meta">
+                            <div class="color-choices">
+                                <div class="color-icon strawb"></div>
+                                <div class="color-icon blackb"></div>
+                                <div class="color-icon crazyb active-color"></div>
+                                <div class="color-icon fireorange"></div>
+                            </div>
+                            <p class="product-name"><a href="#">Dog GPS Tracker Collar</a></p>
+                            <div class="rating">
+                                <img src="./assets/icons/rating-4stars.svg"
+                                    alt="4 out of 5 stars average rating"
+                                    height="24px" width="100px"
+                                />
+                                <p>(36)</p>
+                            </div>
+                            <p class="price">$19.99</p>
+                            <div class="availability">
+                                <p>Currently in Stock</p>
+                                <img src="./assets/icons/checkmark.svg" id="checkmark"
+                                    alt="check mark"
+                                    height="12px" width="12px"
+                                />
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-25 product-preview" id="food-attachment">
+                        <div class="thumbnail">
+                            <!-- <a href=""> -->
+                                <img src="./assets/images/food-attachment.jpg"
+                                alt="Aerial photo of small dog eating kibble from a bowl"
+                                />
+                            <!-- </a> -->
+                        </div>
+                        <div class="product-meta">
+                            <div class="color-choices">
+                                <!-- <div class="color-icon strawb"></div>
+                                <div class="color-icon blackb"></div>
+                                <div class="color-icon crazyb active-color"></div> -->
+                            </div>
+                            <p class="product-name"><a href="#">Harness Attachment - Food</a></p>
+                            <div class="rating">
+                                <img src="./assets/icons/rating-4stars.svg"
+                                    alt="4 out of 5 stars average rating"
+                                    height="24px" width="100px"
+                                />
+                                <p>(27)</p>
+                            </div>
+                            <p class="price">$15.99</p>
+                            <div class="availability">
+                                <p>Currently in Stock</p>
+                                <img src="./assets/icons/checkmark.svg" id="checkmark"
+                                    alt="check mark"
+                                    height="12px" width="12px"
+                                />
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div> 
+
+                <div class="row">
+                    <div class="col-25 product-preview" id="water-attachment">
+                        <div class="thumbnail">
+                            <!-- <a href=""> -->
+                                <img src="./assets/images/water-attachment.jpg"
+                                alt="White and brown cat drinking water from a glass"
+                                />
+                            <!-- </a> -->
+                        </div>
+                        <div class="product-meta">
+                            <div class="color-choices">
+                                <!-- <div class="color-icon strawb"></div>
+                                <div class="color-icon blackb"></div>
+                                <div class="color-icon crazyb active-color"></div> -->
+                            </div>
+                            <p class="product-name"><a href="#">Harness Attachment - Water</a></p>
+                            <div class="rating">
+                                <img src="./assets/icons/rating-4stars.svg"
+                                    alt="4 out of 5 stars average rating"
+                                    height="24px" width="100px"
+                                />
+                                <p>(6)</p>
+                            </div>
+                            <p class="price">$15.99</p>
+                            <div class="availability">
+                                <p>Out of Stock</p>
+                                <img src="./assets/icons/x.svg" id="out-of-stock"
+                                    alt="X mark"
+                                    height="12px" width="12px"
+                                />
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-25 product-preview" id="cat-harness">
+                        <div class="thumbnail">
+                            <!-- <a href=""> -->
+                                <img src="./assets/images/cat-harness.jpg"
+                                alt="Brown tabby and white cat with pink harness laying in grass"
+                                />
+                            <!-- </a> -->
+                        </div>
+                        <div class="product-meta">
+                            <div class="color-choices">
+                                <div class="color-icon strawb active-color"></div>
+                                <div class="color-icon blackb"></div>
+                                <div class="color-icon crazyb"></div>
+                                <div class="color-icon fireorange"></div>
+                            </div>
+                            <p class="product-name"><a href="#">Cat Harness</a></p>
+                            <div class="rating">
+                                <img src="./assets/icons/rating-4stars.svg"
+                                    alt="4 out of 5 stars average rating"
+                                    height="24px" width="100px"
+                                />
+                                <p>(12)</p>
+                            </div>
+                            <p class="price">$24.99</p>
+                            <div class="availability">
+                                <p>Currently in Stock</p>
+                                <img src="./assets/icons/checkmark.svg" id="checkmark"
+                                    alt="check mark"
+                                    height="12px" width="12px"
+                                />
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-25 product-preview" id="cat-gps-tracker">
+                        <div class="thumbnail">
+                            <a href="./cat-gps-tracker-collar.html">
+                                <img src="./assets/images/cat-gps-collar.png"
+                                alt="Black and white cat with GPS Tracker Collar"
+                                />
+                            </a>
+                        </div>
+                        <div class="product-meta">
+                            <div class="color-choices">
+                                <div class="color-icon strawb"></div>
+                                <div class="color-icon blackb active-color"></div>
+                                <div class="color-icon crazyb"></div>
+                                <div class="color-icon fireorange"></div>
+                            </div>
+                            <p class="product-name">
+                                <a href="./cat-gps-tracker-collar.html">Cat GPS Tracker Collar</a>
+                            </p>
+                            <div class="rating">
+                                <img src="./assets/icons/rating-4stars.svg"
+                                    alt="4 out of 5 stars average rating"
+                                    height="24px" width="100px"
+                                />
+                                <p>(7)</p>
+                            </div>
+                            <p class="price">$19.99</p>
+                            <div class="availability">
+                                <p>Currently in Stock</p>
+                                <img src="./assets/icons/checkmark.svg" id="checkmark"
+                                    alt="check mark"
+                                    height="12px" width="12px"
+                                />
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-25 product-preview">
+                        
+                    </div>
+                </div> 
+
+                <div class="pagination">
+                    <h6>7 of 7 items • Page 1 of 1</h6>
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer Nav -->
+    <footer>
+        <row>
+            <div id="footer-left">
+                <div id="copyright"><p>© 2021 Muddy Paws Adventure Gear</p></div>
+            </div>
+
+            <div id="footer-center">
+                <ul>
+                    <li><a href="./index.html">Home</a></li> /
+                    <li><a href="./shop.html">Shop</a></li> /
+                    <li><a href="./articles.html">Articles</a></li> /
+                    <li><a href="./about.html">About Us</a></li> /
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+
+                <p id="footer-contact"><a href="tel:555-867-5309">+1 (555) 867-5309</a></p>
+            </div>
+
+            <div id="footer-right">
+                <p>
+                    5580 Ellsworth Ave, Pittsburgh, PA 15232
+                    <br>Store Hours: M-F 10a-8p, Sat 11a-6p</p>
+            </div>
+        </row>
+
+    </footer>
+</body>
+
+
+
+</html>

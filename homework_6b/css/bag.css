@@ -1,0 +1,153 @@
+/* Styling for Shopping Bag Page of Muddy Paws */
+
+/* Return to Shopping Button */
+
+#intro {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+#return-button {
+  background-color: #516d00;
+}
+
+#return-button:hover {
+  background-color: #a45e0c;
+}
+
+/*
+BAG SECTION
+*/
+
+#bag {
+  /*display: none;*/ /* Bag is not displayed unless contains 1+ items */
+  border-top: 1px solid #fff;
+  padding-top: 20px;
+}
+
+#summary-heading {
+  margin-left: 10px;
+}
+
+#items-table,
+#summary-table {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(91, 109, 0, 0.5);
+  padding: 15px 12px;
+  border-radius: 8px;
+}
+
+#items-table {
+  margin-right: 10px;
+  width: 100%;
+}
+
+#summary-table {
+  margin-left: 10px;
+}
+
+/* Items Table */
+
+#items-th,
+#quant-th,
+#price-th {
+  text-align: left;
+  border-bottom: 1px solid #fff;
+  font-weight: 400;
+  font-style: italic;
+}
+
+#items-th {
+  width: 50%;
+}
+
+#quant-th {
+  width: 30%;
+}
+
+#price-th {
+  width: 20%;
+  text-align: right;
+}
+
+.items-td {
+  padding: 10px 0px;
+}
+
+.item-descript p {
+  margin: 5px 10px;
+}
+
+#quant-label {
+  display: none;
+}
+
+.quant-td {
+  padding: 10px 0px;
+  display: inline-block;
+}
+
+.price-td {
+  padding: 10px 0px;
+}
+
+.price-td h4 {
+  text-align: right;
+}
+
+#per-price {
+  font-size: 14px;
+  font-style: italic;
+  text-align: right;
+}
+
+/* Summary Table */
+
+#summary-table table {
+  margin: 5px;
+}
+
+#summary-table th {
+  display: none;
+}
+
+#summary-table td {
+  padding: 0.25em 0px;
+}
+
+#subtotal-lbl,
+#taxes-fees-lbl,
+#shipping-lbl {
+  font-size: 0.8em;
+}
+
+#total-lbl {
+  font-size: 1em;
+}
+
+#subtotal-amt,
+#taxes-fees-amt,
+#shipping-amt,
+#total-amt {
+  text-align: right;
+  font-size: 1em;
+}
+
+#total-amt {
+  font-weight: 600;
+}
+
+#total-lbl,
+#total-amt {
+  border-top: 1px solid #fff;
+}
+
+#checkout-button {
+  margin-left: 5px;
+  float: right;
+}
+
+#checkout-button button {
+  padding: 10px 15px;
+}

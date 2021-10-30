@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>Muddy Paws - Cat GPS Tracker Collar </title>
+
+<script type="text/javascript" src="./scripts/bag.js"></script>
+<script type="text/javascript" src="./scripts/script.js"></script>
+<script type="text/javascript" src="./scripts/product.js"></script>
+
+<!--Coustard font link-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Coustard:wght@400;900&display=swap" rel="stylesheet">
+
+<!--Cabin font link-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="./css/styles.css">
+<link rel="stylesheet" type="text/css" href="./css/product.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <body>
+        <!--Header Nav-->
+        <header>
+            
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="./index.html" id="logo-home-nav">
+                        <img
+                            src="./assets/images/muddy-paws-logo.svg"
+                            alt="Muddy Paws Adventure Gear logo with pawprints"
+                            height="52px" width="175px"/>
+                    </a></li>
+                    <li><a href="./shop.html">Shop</a></li>
+                    <li><a href="./articles.html">Articles</a></li>
+                    <li><a href="./about-us.html">About Us</a></li>
+                    <li style="margin-right:15px;"><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+    
+            <div class="header-extras">
+                <span id="bag-quantity"></span>
+
+                <div class="header-extras-top">
+                    <a href="./bag.html">
+                        <img id="shopping-bag"
+                            src="./assets/icons/bag-icon.svg"
+                            alt="Shopping Bag icon"
+                            height="25px" width="25px"/>
+                    </a>
+                </div>
+                <div class="header-extras-bottom">
+                    <input id="search-bar" type="text" placeholder="Search...">
+                </div>
+            </div>
+    
+        </header>
+    
+    
+        <main> <!-- Main Container -->
+            <div class="breadcrumbs">
+                <a href="./shop.html">Shop</a>  >  
+                <span class="current-page">Cat GPS Tracker Collar</span>
+            </div>
+
+            <section class="product-details">
+                <div class="row">
+                    <div class="col-50 product-images">
+                        <div class="image-highlight">
+                            <img src="./assets/images/cat-gps-collar.png"
+                                alt="Black and white cat with GPS Tracker Collar"
+                                width="100%" height="auto"
+                            />
+                        </div>
+                        <div class="row image-choices">
+                            <div class="col-25">
+                                <img src="./assets/images/cat-gps-collar.png"
+                                alt="Black and white cat with GPS Tracker Collar"
+                                width="100%" height="auto"
+                            />
+                            </div>
+                            <div class="col-25">
+                                <img src="./assets/images/cat-gps-collar.png"
+                                alt="Black and white cat with GPS Tracker Collar"
+                                width="100%" height="auto"
+                            />
+                            </div>
+                            <div class="col-25">
+                                <img src="./assets/images/cat-gps-collar.png"
+                                alt="Black and white cat with GPS Tracker Collar"
+                                width="100%" height="auto"
+                            />
+                            </div>
+                            <div class="col-25">
+                                <img src="./assets/images/cat-gps-collar.png"
+                                alt="Black and white cat with GPS Tracker Collar"
+                                width="100%" height="auto"
+                            />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-50 product-text">
+                        <h2 id="product-name">Cat GPS Tracker Collar</h2>
+                        <p id="description">
+                            Donec elit elit, varius eu imperdiet quis, vehicula eget dolor. 
+                            Aliquam vulputate tincidunt euismod. Maecenas vitae diam tellus. 
+                            Donec vulputate elit et nisl pretium luctus. Vestibulum quis 
+                            molestie dui. Aenean et auctor velit, a sagittis massa. Sed eget 
+                            magna dignissim, feugiat neque vel, auctor massa.
+                        </p>
+
+                        <h4 class="pricing">$19.99</h4>
+                        <div class="color-choices" id="color-choices">
+                            <div class="color-icon strawb" onclick="activateColor('strawb')"></div>
+                            <div class="color-icon blackb active-color" onclick="activateColor('blackb')"></div>
+                            <div class="color-icon crazyb" onclick="activateColor('crazyb')"></div>
+                            <div class="color-icon fireorange" onclick="activateColor('fireorange')"></div>
+                        </div>
+                        <div class="size-options">
+                            <label for="size-menu">Size:</label>
+                            <div class="size-menu">
+                                <select id="size-menu" onchange="updateDisplay()">
+                                    <option value="tiny">Tiny</option>
+                                    <option value="small">Small</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="large">Large</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="quantity-option">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" id="quantity" step="1" value="1" min="0" max="10">
+                        </div>
+                        <div class="availability">
+                            <p>Currently in Stock</p>
+                            <img src="./assets/icons/checkmark.svg" id="checkmark"
+                                alt="check mark"
+                                height="12px" width="12px"
+                            />
+                        </div>
+
+                        <div id="selection-summary"></div>
+                        <p class="add-to-bag">
+                            <button id="add-to-bag" onclick="addToBag()">Add to Bag</button>
+                        </p>
+                    </div>
+                </div>
+            </section> <!-- product-details -->
+
+
+            <section class="product-reviews">
+                <h2>Reviews for This Product</h2>
+                <div class="row">
+                    <div class="col-25 review-left">
+                        <div class="rating">
+                            <img src="./assets/icons/rating-4stars.svg"
+                                alt="4 out of 5 stars average rating"
+                                height="36px" width="150px"
+                            />
+                        </div>
+                        <p>Average Rating: 4 out of 5</p>
+                        <p>7 Reviews</p>
+                    </div>
+
+                    <div class="col-50 review-right">
+                        <div class="review-preview">
+                            <h4>Decent Quality for relatively low price</h4> <span class="review-author">by Omeir K</span>
+                            <p>
+                                Donec elit elit, varius eu imperdiet quis, vehicula eget dolor. Aliquam vulputate tincidunt euismod. 
+                                Maecenas vitae diam tellus. Donec vulputate elit et nisl pretium luctus... 
+                                <a href="./articles.html">Read More</a>
+                            </p>
+                        </div>
+
+                        <div class="review-preview">
+                            <h4>This collar does not fit my dog :(</h4> <span class="review-author">by Allen Z</span>
+                            <p>
+                                Donec elit elit, varius eu imperdiet quis, vehicula eget dolor. Aliquam vulputate tincidunt euismod. 
+                                Maecenas vitae diam tellus. Donec vulputate elit et nisl pretium luctus... 
+                                <a href="./articles.html">Read More</a>
+                            </p>
+                        </div>
+
+                        <div class="load-more">
+                            <button class="reviews-button">Load More Reviews</button>
+                        </div>
+                    </div>
+
+                    <div class="col-25 review-left">
+                    </div>
+
+                </div>
+            </section> <!-- product-details -->
+        </main>
+    
+        <!-- Footer Nav -->
+        <footer>
+            <row>
+                <div id="footer-left">
+                    <div id="copyright"><p>© 2021 Muddy Paws Adventure Gear</p></div>
+                </div>
+    
+                <div id="footer-center">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li> /
+                        <li><a href="./shop.html">Shop</a></li> /
+                        <li><a href="./articles.html">Articles</a></li> /
+                        <li><a href="./about.html">About Us</a></li> /
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+    
+                    <p id="footer-contact"><a href="tel:555-867-5309">+1 (555) 867-5309</a></p>
+                </div>
+    
+                <div id="footer-right">
+                    <p>
+                        5580 Ellsworth Ave, Pittsburgh, PA 15232
+                        <br>Store Hours: M-F 10a-8p, Sat 11a-6p</p>
+                </div>
+            </row>
+    
+        </footer>
+    </body>
+    
+</body>
+
+
+
+
+
+</html>

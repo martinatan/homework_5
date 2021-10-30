@@ -1,0 +1,321 @@
+/* Global Styling for Muddy Paws Website */
+
+* {
+  box-sizing: border-box;
+}
+
+@font-family {
+  font-family: "eacologica round slab";
+  src: url("assets/fonts/eacologica-round-slab-ffp.ttf") format("truetype"),
+    url("assets/fonts/eacologica-round-slab-ffp.otf") format("opentype");
+}
+
+body {
+  font-family: "Cabin", sans-serif;
+  background-color: #3a3f0d;
+  color: #ffffff;
+
+  margin: 60px auto;
+  padding: 0;
+  height: 100%;
+  width: 65%;
+  font-size: 100%;
+}
+
+@media screen and (max-width: 1280px) {
+  body {
+    width: 80%;
+  }
+}
+
+section {
+  margin: 20px 0px;
+  padding-bottom: 50px;
+}
+
+#intro {
+  padding-bottom: 0px;
+}
+
+/*
+HEADER STYLING
+*/
+
+header {
+  padding-bottom: 15px;
+}
+
+.header-nav {
+  display: inline-block;
+  width: 75%;
+}
+.header-nav ul {
+  padding: 0px;
+  margin: 0px;
+}
+.header-nav ul li {
+  list-style-type: none;
+  font-family: "Coustard", serif;
+  display: inline;
+  margin-right: 25px;
+  font-size: 1.05em;
+}
+
+.header-nav a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.header-nav a:hover {
+  text-decoration: underline !important;
+}
+
+#logo-home-nav {
+  text-decoration: none !important;
+}
+
+.header-nav .active {
+  color: #ed9026 !important;
+  text-decoration: underline !important;
+}
+
+.header-extras {
+  display: inline-block;
+  float: right;
+  width: 25%;
+  position: relative;
+}
+
+.header-extras-top {
+  position: absolute;
+  top: 0px;
+  right: 0;
+}
+.header-extras-bottom {
+  position: absolute;
+  top: 35px;
+  right: 0;
+}
+
+/* Shopping Bag Icon and Quantity */
+#bag-quantity {
+  /* idealized positioning for a quantity of "1" */
+  font-size: 8pt; /* change to 7pt for two digits */
+
+  position: absolute;
+  top: 11px;
+  right: 11px; /* change to 10px for two digits */
+}
+
+#search-bar {
+  font-family: "Cabin", sans-serif;
+  width: 100%;
+  border-radius: 4px;
+  border: none;
+  padding: 5px;
+}
+
+/*
+BODY STYLING
+*/
+
+main p {
+  color: #ffffff;
+  text-align: left;
+}
+
+a {
+  color: #ed9026;
+}
+
+h1,
+h2 {
+  font-family: "Coustard", serif;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 0.2em;
+  margin-top: 0.2em;
+}
+
+h1 {
+  /* Orange text in Coustard font */
+  font-size: 2.25em;
+  color: #ed9026;
+}
+
+h2 {
+  /* White text in Coustard font */
+  font-size: 1.75em;
+}
+
+h3 {
+  /* White text in Cabin font */
+  font-family: "Cabin", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.1em;
+
+  text-align: center;
+}
+
+h4 {
+  text-align: left;
+  font-size: 1.1em;
+  margin: 0px;
+}
+
+h4 a {
+  text-decoration: none;
+}
+
+h5 {
+  text-align: left;
+  font-style: italic;
+  font-size: 1em;
+  margin: 0px;
+}
+
+h6 {
+  font-size: 0.8em;
+  text-align: center;
+  margin: 0.3em;
+}
+
+button {
+  font-family: "Cabin", sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  color: #fff;
+  background-color: #a45e0c;
+  padding: 10px 35px;
+  border-radius: 6px;
+  border: none;
+  filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.25));
+}
+
+button:hover {
+  background-color: #516d00;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.25));
+}
+
+.color-choices {
+  text-align: left;
+}
+
+.color-choices .color-icon {
+  height: 18px;
+  width: 18px;
+}
+
+.color-icon {
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+  margin-right: 10px;
+}
+.strawb {
+  background-color: #c32047;
+}
+.blackb {
+  background-color: #17111e;
+}
+.crazyb {
+  background-color: #70159a;
+}
+.fireorange {
+  background-color: #ff6b00;
+}
+
+.active-color {
+  border: 1px solid #fff;
+}
+
+/* 4-Column (25-25-25-25) Style */
+.col-25 {
+  float: left;
+  width: 25%;
+}
+
+/* 50-50 Column Style */
+.col-50 {
+  float: left;
+  width: 50%;
+}
+
+/* 75 Column Style */
+.col-75 {
+  float: left;
+  width: 75%;
+}
+
+/* 37.5-62.5 Column Style */
+
+.col-37 {
+  float: left;
+  width: 37.5%;
+}
+
+.col-63 {
+  float: left;
+  width: 62.5%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*
+FOOTER STYLING
+*/
+
+footer {
+  margin-top: 25px;
+  border-top: 1px solid #fff;
+  font-size: 0.8em;
+  font-family: "Cabin", sans-serif;
+  position: relative;
+}
+
+#footer-left {
+  float: left;
+  width: 25%;
+
+  font-size: 0.9em;
+}
+
+#footer-center {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+#footer-contact {
+  text-align: center;
+}
+
+#footer-right {
+  float: left;
+  width: 25%;
+
+  font-size: 0.9em;
+}
+
+#footer-right p {
+  text-align: right !important;
+}
+
+footer ul {
+  text-align: center;
+  padding: 0px;
+}
+
+footer ul li {
+  list-style-type: none;
+  display: inline;
+  margin: 10px;
+}
