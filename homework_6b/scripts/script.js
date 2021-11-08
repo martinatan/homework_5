@@ -111,24 +111,24 @@ function createProduct() {
     return newProd = new Product(prodName, prodColor, prodSize, pricePerProd, prodQuantity);
 }
 
-/*
-Finds color icon with the active-color class and returns the color of this
-active-color icon.
-*/
-function getColor() {
-    var chosenColor = document.querySelector(".active-color");
-    var colorClasses = chosenColor.className;
-    switch(colorClasses) {
-        case "color-icon strawb active-color":
-            return "Strawberry";
-        case "color-icon blackb active-color":
-            return "Blackberry";
-        case "color-icon crazyb active-color":
-            return "Crazyberry";
-        case "color-icon fireorange active-color":
-            return "Fire Orange";           
-    }
-}
+// /*
+// Finds color icon with the active-color class on Product page and
+// returns the color of this active-color icon.
+// */
+// function getColor() {
+//     var chosenColor = document.querySelector(".active-color");
+//     var colorClasses = chosenColor.className;
+//     switch(colorClasses) {
+//         case "color-icon strawb active-color":
+//             return "Strawberry";
+//         case "color-icon blackb active-color":
+//             return "Blackberry";
+//         case "color-icon crazyb active-color":
+//             return "Crazyberry";
+//         case "color-icon fireorange active-color":
+//             return "Fire Orange";           
+//     }
+// }
 
 /*
 Gets chosen size of product from selection menu

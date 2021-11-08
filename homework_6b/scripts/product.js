@@ -33,7 +33,7 @@ function activateColor(color) {
 Update display when quantity is changed
 */
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("quantity").addEventListener("input", function() {
+    document.getElemesntById("quantity").addEventListener("input", function() {
         console.log("it changed");
         displaySelection();
     });
@@ -76,6 +76,9 @@ function updateImage() {
     }
 }
 
+/*
+Changes display on Product page of what item is being added to Bag
+*/
 function displaySelection() {
     var summaryText = document.getElementById("selection-summary");
 
@@ -130,28 +133,28 @@ function getColor() {
     }
 }
 
-/*
-Gets chosen size of product from selection menu
-*/
-function getSize() {
-    var selectSize = document.getElementById('size-menu');
-    return selectSize.options[selectSize.selectedIndex].value;
-}
+// /*
+// Gets chosen size of product from selection menu
+// */
+// function getSize() {
+//     var selectSize = document.getElementById('size-menu');
+//     return selectSize.options[selectSize.selectedIndex].value;
+// }
 
-/*
-Gets price of the product from the HTML
-*/
-function getPricePer() {
-    return document.querySelector('.pricing').innerHTML;
-}
+// /*
+// Gets price of the product from the HTML
+// */
+// function getPricePer() {
+//     return document.querySelector('.pricing').innerHTML;
+// }
 
-/*
-Gets chosen quantity of item from the number input field.
-*/
-function getQuantity() {
-    return document.getElementById("quantity").value;
+// /*
+// Gets chosen quantity of item from the number input field.
+// */
+// function getQuantity() {
+//     return document.getElementById("quantity").value;
 
-}
+// }
 
 /*
 Helper function to capitalize string
