@@ -100,7 +100,7 @@ function displaySelection() {
     var pricePerProd = getPricePer();
 
     price = pricePerProd.replace(/\$/g, ''); //make into a number;
-    console.log('price: ' + price);
+    //console.log('price: ' + price);
 
     //get quantity
     var prodQuantity = getQuantity();

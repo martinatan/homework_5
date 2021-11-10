@@ -43,13 +43,10 @@ document.addEventListener("DOMContentLoaded", function() {
     bagObj = JSON.parse(bagObj);
 
     //empty Bag contents for debugging
-    // bagObj = [];
+    //bagObj = [];
 
     //insert into bag-quantity on the page
     numItems = bagObj.length;
-
-    console.log("length of bag:" + bagObj.length);
-    console.log("num items:" + numItems);
 
     updateBagIcon(numItems);
 
@@ -75,26 +72,6 @@ function updateBagIcon(numItems) {
         document.getElementById('bag-quantity').style.fontSize = "8pt";
     }
 }
-
-
-// /*
-// Finds color icon with the active-color class on Product page and
-// returns the color of this active-color icon.
-// */
-// function getColor() {
-//     var chosenColor = document.querySelector(".active-color");
-//     var colorClasses = chosenColor.className;
-//     switch(colorClasses) {
-//         case "color-icon strawb active-color":
-//             return "Strawberry";
-//         case "color-icon blackb active-color":
-//             return "Blackberry";
-//         case "color-icon crazyb active-color":
-//             return "Crazyberry";
-//         case "color-icon fireorange active-color":
-//             return "Fire Orange";           
-//     }
-// }
 
 /*
 Gets chosen size of product from selection menu

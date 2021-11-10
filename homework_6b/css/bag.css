@@ -7,6 +7,10 @@
   padding-bottom: 25px;
 }
 
+#bag-subheading {
+  display: none;
+}
+
 #return-button {
   background-color: #516d00;
 }
@@ -20,7 +24,7 @@ BAG SECTION
 */
 
 #bag {
-  /*display: none;*/ /* Bag is not displayed unless contains 1+ items */
+  display: none; /* toggled when bag is empty */
   border-top: 1px solid #fff;
   padding-top: 20px;
 }

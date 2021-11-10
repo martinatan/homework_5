@@ -30,10 +30,9 @@ button. See how the quantity in the shopping bag icon increases as you Add to Ba
 
 # NOTES for HW 6B
 to-do:
-    * Turn HTML event listeners into add Event Listener functions, test
-    * Dynamically add row of the Bag based on what's in the Bag, test (add more info like shipping and img src to JSON)
+    * Dynamically add row of the Bag based on what's in the Bag, test
+    * add more info like shipping and img src to JSON
     * Update Bag price based on items in Bag
-    * Update image on product detail page
-    * no edit Bag functionality because I'm mean/evil :)
+    * Remove product from local storage bag
 
 Thanks for viewing! I hope you enjoy exploring the prototype.
