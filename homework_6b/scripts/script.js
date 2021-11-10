@@ -25,7 +25,7 @@ This retrieves the JSON of Products currently in the Shopping Bag.
 bagObj = localStorage.getItem('localBag'); 
 
 /*
-This initializess an empty Bag JSON in localStorage if it does not already exist.
+This initializes an empty Bag JSON in localStorage if it does not already exist.
 */
 if (!bagObj) {
     var emptyBag = []; //empty JSON
@@ -34,25 +34,33 @@ if (!bagObj) {
 }
 
 /*
-This updates the number in the bag icon to reflect the number of items in the Shopping Bag
-after the page has been loaded.
+On page load, this updates the number in the bag icon to reflect
+the number of items in the Shopping Bag.
 */
 document.addEventListener("DOMContentLoaded", function() {
     //get Bag from local storage
     bagObj = localStorage.getItem('localBag');
     bagObj = JSON.parse(bagObj);
 
-    //bagObj = [];
+    //empty Bag contents for debugging
+    // bagObj = [];
 
     //insert into bag-quantity on the page
     numItems = bagObj.length;
 
+    console.log("length of bag:" + bagObj.length);
+    console.log("num items:" + numItems);
+
     updateBagIcon(numItems);
 
-    // bagObj = JSON.stringify(bagObj);
-    // localStorage.setItem('localBag', bagObj);
+    bagObj = JSON.stringify(bagObj);
+    localStorage.setItem('localBag', bagObj);
 });
 
+/*
+updateBagIcon: Takes in number of items from event listener and
+updates number displayed in the Bag icon accordingly.
+*/
 function updateBagIcon(numItems) {
     document.getElementById('bag-quantity').innerHTML = numItems;
 
@@ -68,48 +76,6 @@ function updateBagIcon(numItems) {
     }
 }
 
-
-/*
-On click of the Add to Bag button on the Product Detail page, this function uses the
-current product and selections to create a new Product and add to the bag Obj.
-*/
-function addToBag() {
-    bagObj = localStorage.getItem('localBag');
-    bagObj = JSON.parse(bagObj);
-
-    var newProd = createProduct();
-
-    bagObj.push(newProd);
-
-    updateBagIcon(bagObj.length);
-
-    bagObj = JSON.stringify(bagObj);
-
-    localStorage.setItem('localBag', bagObj);
-}
-
-/*
-Called by addToBag on Product Detail page. Populates Product object with settings
-from the current Product Detail form.
-*/
-function createProduct() {
-    //get name of product
-    var prodName = document.getElementById('product-name').innerHTML;
-
-    //get selected color
-    var prodColor = getColor();
-
-    //get selected size
-    var prodSize = getSize();
-
-    //get price per product
-    var pricePerProd = getPricePer();
-
-    //get quantity
-    var prodQuantity = getQuantity();
-
-    return newProd = new Product(prodName, prodColor, prodSize, pricePerProd, prodQuantity);
-}
 
 // /*
 // Finds color icon with the active-color class on Product page and
