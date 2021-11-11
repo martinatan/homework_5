@@ -130,8 +130,6 @@ function addToBag() {
 
     var newProd = createProduct();
 
-    console.log("isDuplicate value: " + isDuplicate(newProd));
-
     if (isDuplicate(newProd)) { // update existing row in Bag
         updateItemInBag(newProd);
     } else { // add new row in Bag
@@ -174,11 +172,6 @@ function isDuplicate(product) {
     bagObj = JSON.parse(bagObj);
 
     for (var i = 0; i < bagObj.length; i++) {
-        // console.log("product color: " + bagObj[i].color);
-        // console.log("new color: " + product.color);
-        // console.log("product size: " + bagObj[i].size);
-        // console.log("new color: " + product.size);
-
         if (bagObj[i].color === product.color && 
             bagObj[i].size === product.size) {
             isDupe = true;
@@ -202,14 +195,11 @@ function updateItemInBag(product) {
     for (var i = 0; i < bagObj.length; i++) {
         if (bagObj[i].color === product.color &&
             bagObj[i].size === product.size) {
-            //console.log("found the matching index");
 
             var bagQuant = parseInt(bagObj[i].quantity);
             var addQuant = parseInt(product.quantity);
-            //console.log("addQuant = " + addQuant);
 
             bagObj[i].quantity = bagQuant + addQuant;
-            //console.log("new quant = " + bagObj[i].quantity);
         }
     }
     bagObj = JSON.stringify(bagObj);   

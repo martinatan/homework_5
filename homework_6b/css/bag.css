@@ -33,6 +33,18 @@ BAG SECTION
   margin-left: 10px;
 }
 
+h4 {
+  display: inline;
+}
+
+#clear-button {
+  padding: 0px 10px;
+  display: inline;
+  background-color: rgba(0, 0, 0, 0);
+  text-decoration: underline;
+  color: #ed9026;
+}
+
 #items-table,
 #summary-table {
   margin-top: 10px;
@@ -81,6 +93,10 @@ BAG SECTION
 
 .item-descript p {
   margin: 5px 10px;
+}
+
+.remove-item {
+  text-decoration: underline;
 }
 
 #quant-label {

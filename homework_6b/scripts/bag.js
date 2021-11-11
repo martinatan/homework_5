@@ -19,45 +19,73 @@ This function will determine whether to tell the user whether the Bag is
 empty or not. If not empty, it will display the table of products.
 */
 document.addEventListener("DOMContentLoaded", function() {
-    var bagHeading, bagSubhead,bagSection;
+    updateDisplay();
+});
+
+function updateDisplay() {
+    var bagHeading, bagSubhead, bagSection;
     
+    console.log("updating display");
     //get Bag from local storage
     bagObj = localStorage.getItem('localBag');
     bagObj = JSON.parse(bagObj);
 
-    console.log("bagObj length " + bagObj.length);
-    if(bagObj.length > 0) {
+    if (bagObj.length > 0) {
+        console.log("inside bag not empty")
+        console.log("bag length " + bagObj.length);
+
         bagHeading = document.getElementById("bag-heading");
         bagHeading.innerHTML = "Shopping Bag";
 
         bagSubhead = document.getElementById("bag-subheading");
         bagSubhead.style.display = "none";
 
-        displayRows(); // loop thru bag and build tr for each
-        displayPrice(); // calc subtotal, tax, shipping, and total
+        updateRows(); // loop thru bag and build tr for each
+        updatePrice(); // calc subtotal, tax, shipping, and total
 
         //display completed table
         bagSection = document.getElementById("bag");
         bagSection.style.display = "inline-block";
     } else {
         //display "Your bag is empty" status
+        console.log("inside bag empty)")
+        console.log("bag length " + bagObj.length);
+
         bagHeading = document.getElementById("bag-heading");
         bagHeading.innerHTML = "Your bag is empty.";
 
         bagSubhead = document.getElementById("bag-subheading");
         bagSubhead.innerHTML = "Search gear for your next Muddy Paws adventure to fill it up!";
         bagSubhead.style.display = "block";
-    }
 
-    //add event listener for delete button here?
+        bagSection = document.getElementById("bag");
+        bagSection.style.display = "none";
+    }
+}
+
+/*
+Add remove functions once page loads
+*/
+document.addEventListener("DOMContentLoaded", function() {
+    var removeLinks = document.getElementsByClassName("remove-item");
+    for (var i = 0; i < removeLinks.length; i++) {
+        removeLinks[i].addEventListener("onclick", function() {
+            removeItem();
+        });
+    }
 });
 
 /*
 Given at least one item in the Bag, create and insert table rows
 */
-function displayRows() {
+function updateRows() {
     var table = document.getElementById("items-table");
 
+    //delete all old children first
+    for (var i = 1; i < (table.rows.length); i++) {
+        table.deleteRow(i);
+    }
+    
     for (var i = 0; i < bagObj.length; i++) {
         var tr = document.createElement("TR"); 
         
@@ -77,15 +105,57 @@ function displayRows() {
 /*
 Given at least one item in the Bag, calculate and insert fees
 */
-function displayPrice() {
+function updatePrice() {
+    var subtotal = 0, taxesFees = 0, shipping = 0, total = 0;
 
+    subtotal = calcSubtotal();
+    taxesFees = (subtotal * 0.07).toFixed(2);
+    shipping = (9.99).toFixed(2);
+    total = parseFloat(subtotal) + parseFloat(taxesFees) + parseFloat(shipping);
+    total = (total).toFixed(2);
+
+    document.querySelector("#subtotal-amt").innerHTML = "$" + subtotal;
+    document.querySelector("#taxes-fees-amt").innerHTML = "$" + taxesFees;
+    document.querySelector("#shipping-amt").innerHTML = "$" + shipping;
+    document.querySelector("#total-amt").innerHTML = "$" + total;
 }
 
 /*
-returns items TD to append to TR
+loops through bag to retrieve subtotals and quantity to calculate a 
+grand subtotal of items in the cart.
+*/
+function calcSubtotal() {
+    var runningSub = 0;
+    for (var i = 0; i < bagObj.length; i++) {
+        var pricePer = bagObj[i].price.replace(/\$/g, '');
+        var quant = bagObj[i].quantity;
+
+        runningSub = runningSub + (pricePer * quant);
+    }
+    return runningSub.toFixed(2);
+}
+
+/*
+Returns items TD to append to TR
 */
 function itemsTD(i) {
     var td = document.createElement("TD"); 
+    var colorClass;
+
+    switch(bagObj[i].color) {
+        case "Strawberry":
+            colorClass = "strawb";
+            break;
+        case "Blackberry":
+            colorClass = "blackb";
+            break;
+        case "Crazyberry":
+            colorClass = "crazyb";
+            break;
+        case "Fire Orange":
+            colorClass = "fireorange";  
+            break;         
+    }
 
     td.innerHTML = '<div class="row item-details">' +
                         '<div class="col-25 thumbnail">' +
@@ -96,12 +166,14 @@ function itemsTD(i) {
                         '</div>' +
                         '<div class="col-75 item-descript">' + 
                             '<p><a href="./dog-harness.html">Dog Harness</a></p>'+
-                            '<p>Size: ' + bagObj[i].size + '</p>' +
+                            '<p>Size: ' + capitalize(bagObj[i].size) + '</p>' +
                             '<p>Color: ' + bagObj[i].color +
-                                '<span class="color-icon ' + bagObj[i].color + ' active-color"></span>' + 
-                                '</p>' +
-                            '</div>' +
-                        '</div>';
+                                ' <span class="color-icon ' + colorClass + ' active-color"></span>' + 
+                            '</p>' +
+                            '<p><a class="remove-item ' + i + '" onclick="removeItem(' + i + ')">Remove</a>' +
+                            '</p>' +
+                        '</div>' +
+                    '</div>';
 
     td.classList.add("items-td");
 
@@ -109,7 +181,7 @@ function itemsTD(i) {
 }
 
 /*
-returns quantity TD to append to TR
+Returns quantity TD to append to TR
 */
 function quantTD(i) {
     var td = document.createElement("TD"); 
@@ -174,7 +246,7 @@ function quantTD(i) {
 }
 
 /*
-returns price TD to append to TR
+Returns price TD to append to TR
 */
 function priceTD(i) {
     var td = document.createElement("TD"); 
@@ -202,4 +274,53 @@ function priceTD(i) {
     td.appendChild(per);
 
     return td;
+}
+
+/*
+Clear bag and update display 
+*/
+function clearBag() {
+    bagObj = localStorage.getItem('localBag');
+    bagObj = JSON.parse(bagObj);
+
+    bagObj = [];
+
+    updateBagIcon(bagObj.length);
+
+
+    bagObj = JSON.stringify(bagObj);
+    localStorage.setItem('localBag', bagObj);
+
+    updateDisplay();
+
+}
+
+/*
+Remove item of particular from Bag and update display
+*/
+function removeItem(index) {
+    console.log("index: " + index);
+    bagObj = localStorage.getItem('localBag');
+    bagObj = JSON.parse(bagObj);
+
+    bagObj.splice(index, 1);
+
+    console.log("bag length after splice: " + bagObj.length);
+
+    updateBagIcon(bagObj.length);
+
+    bagObj = JSON.stringify(bagObj);
+    localStorage.setItem('localBag', bagObj);
+
+    var table = document.getElementById("items-table");
+    table.deleteRow(index);
+
+    updateDisplay();
+}
+
+/*
+Helper function to capitalize string
+*/
+function capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
