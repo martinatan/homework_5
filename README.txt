@@ -29,10 +29,13 @@ feedback on the page, and these product settings can then be added to the Bag by
 button. See how the quantity in the shopping bag icon increases as you Add to Bag!
 
 # NOTES for HW 6B
-to-do:
-    * Dynamically add row of the Bag based on what's in the Bag, test
-    * add more info like shipping and img src to JSON
-    * Update Bag price based on items in Bag
-    * Remove product from local storage bag
+On this version of the prototype, the user is now able to visit the Dog Harnesss page and add the product
+in separate quantities of different color and size combinations. This is reflect as 1 item per combination
+in the Bag icon at the top right.
+
+The user can then visit the Shopping Bag, view the details of their Bag,
+and view the subtotal, additional fee, and total price of the items in the Bag.
+
+The user can also remove individual items or clear the Bag, and see these changes reflected immediately.
 
 Thanks for viewing! I hope you enjoy exploring the prototype.
